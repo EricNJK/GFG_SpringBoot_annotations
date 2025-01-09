@@ -15,5 +15,18 @@ Content-Type: application/json
   "name": "Eric N"
 }
 
-###
+### Model mapping for /api/user/...
+POST http://localhost:8080/api/user/create
+Content-Type: application/json
 
+{
+  "name": "Visitor A",
+  "email": "doNotEmail@srv.com",
+  "password": "default"
+}
+
+###
+GET http://localhost:8080/api/user/1
+Accept: application/json
+
+###
