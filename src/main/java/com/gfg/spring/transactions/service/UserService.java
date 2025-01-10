@@ -5,7 +5,7 @@ import com.gfg.spring.transactions.model.dto.UserDTO;
 
 public interface UserService {
 
-    User createUser(User user);
+    UserDTO createUser(User user);
 
     UserDTO getUser(int id);
 }
