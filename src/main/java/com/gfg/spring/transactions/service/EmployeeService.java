@@ -6,6 +6,8 @@ import com.gfg.spring.transactions.repository.EmployeeRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 @Service
 public class EmployeeService {
 
@@ -39,5 +41,9 @@ public class EmployeeService {
         // cause an error - should roll back the save(employee) operation
         Address unused = addressService.addAddress(null);
         return saved;
+    }
+
+    public List<Employee> getAll() {
+        return employeeRepository.findAll();
     }
 }
